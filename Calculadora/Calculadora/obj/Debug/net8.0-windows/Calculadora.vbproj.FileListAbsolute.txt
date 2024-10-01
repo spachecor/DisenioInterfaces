@@ -1,0 +1,16 @@
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\bin\Debug\net8.0-windows\Calculadora.exe
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\bin\Debug\net8.0-windows\Calculadora.deps.json
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\bin\Debug\net8.0-windows\Calculadora.runtimeconfig.json
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\bin\Debug\net8.0-windows\Calculadora.dll
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\bin\Debug\net8.0-windows\Calculadora.pdb
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.Form1.resources
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.vbproj.GenerateResource.cache
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.AssemblyInfoInputs.cache
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.AssemblyInfo.vb
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.vbproj.CoreCompileInputs.cache
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.dll
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\refint\Calculadora.dll
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.pdb
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\Calculadora.genruntimeconfig.cache
+C:\Users\Selene\Documents\DisenioInterfaces\Calculadora\Calculadora\obj\Debug\net8.0-windows\ref\Calculadora.dll

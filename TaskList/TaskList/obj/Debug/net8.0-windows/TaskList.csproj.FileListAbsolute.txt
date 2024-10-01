@@ -1,0 +1,16 @@
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\bin\Debug\net8.0-windows\TaskList.exe
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\bin\Debug\net8.0-windows\TaskList.deps.json
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\bin\Debug\net8.0-windows\TaskList.runtimeconfig.json
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\bin\Debug\net8.0-windows\TaskList.dll
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\bin\Debug\net8.0-windows\TaskList.pdb
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.Form1.resources
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.csproj.GenerateResource.cache
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.AssemblyInfoInputs.cache
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.AssemblyInfo.cs
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.csproj.CoreCompileInputs.cache
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.dll
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\refint\TaskList.dll
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.pdb
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\TaskList.genruntimeconfig.cache
+C:\Users\Selene\Documents\DisenioInterfaces\TaskList\TaskList\obj\Debug\net8.0-windows\ref\TaskList.dll
