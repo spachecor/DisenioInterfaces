@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Selene\\Documents\\DisenioInterfaces\\Reproductor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA7D3B3D-367E-4C1A-A71E-42130BF5BFA0}|Reproductor\\Reproductor.vbproj|c:\\users\\selene\\documents\\diseniointerfaces\\reproductor\\reproductor\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{EA7D3B3D-367E-4C1A-A71E-42130BF5BFA0}|Reproductor\\Reproductor.vbproj|solutionrelative:reproductor\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA7D3B3D-367E-4C1A-A71E-42130BF5BFA0}|Reproductor\\Reproductor.vbproj|c:\\users\\selene\\documents\\diseniointerfaces\\reproductor\\reproductor\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EA7D3B3D-367E-4C1A-A71E-42130BF5BFA0}|Reproductor\\Reproductor.vbproj|solutionrelative:reproductor\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\Selene\\Documents\\DisenioInterfaces\\Reproductor\\Reproductor\\Form1.vb",
+              "RelativeDocumentMoniker": "Reproductor\\Form1.vb",
+              "ToolTip": "C:\\Users\\Selene\\Documents\\DisenioInterfaces\\Reproductor\\Reproductor\\Form1.vb",
+              "RelativeToolTip": "Reproductor\\Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-03T11:40:14.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Selene\\Documents\\DisenioInterfaces\\Reproductor\\Reproductor\\Form1.vb",
+              "RelativeDocumentMoniker": "Reproductor\\Form1.vb",
+              "ToolTip": "C:\\Users\\Selene\\Documents\\DisenioInterfaces\\Reproductor\\Reproductor\\Form1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Reproductor\\Form1.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-03T11:36:37.9Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
