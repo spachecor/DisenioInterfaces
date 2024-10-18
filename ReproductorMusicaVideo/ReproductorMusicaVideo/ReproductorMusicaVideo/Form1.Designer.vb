@@ -152,9 +152,9 @@ Partial Class Form1
         Label9.ForeColor = Color.White
         Label9.Location = New Point(206, 585)
         Label9.Name = "Label9"
-        Label9.Size = New Size(40, 32)
+        Label9.Size = New Size(53, 32)
         Label9.TabIndex = 15
-        Label9.Text = "70"
+        Label9.Text = "100"
         ' 
         ' TrackBar3
         ' 
