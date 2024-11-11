@@ -1,4 +1,4 @@
-package com.spacrod.ejerciciouno;
+package com.spachecor.pacheco_selene_t4_di;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,15 +10,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
-    public static Stage stage;
+    public static Stage primaryStage;
     public static Image icono;
     @Override
     public void start(Stage stage) throws IOException {
-        Main.stage = stage;
-        Main.icono = new Image(Objects.requireNonNull(getClass().getResourceAsStream("img/iconoHotel.png")));
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fxml/hello-view.fxml"));
+        primaryStage = stage;
+        icono = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/img/icono.png")));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/menu-principal.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-        stage.setTitle("Hotel Canfranc Estación");
+        stage.setTitle("My Cat Yugawara Hostal");
         stage.getIcons().add(icono);
         stage.setScene(scene);
         stage.show();
