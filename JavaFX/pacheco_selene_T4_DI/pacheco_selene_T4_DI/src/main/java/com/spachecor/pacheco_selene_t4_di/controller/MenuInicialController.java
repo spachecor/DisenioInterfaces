@@ -18,6 +18,12 @@ public class MenuInicialController {
     private Button botonSalir;
 
     @FXML
+    public void initialize() {
+        botonReservas.setFont(customFontButton);
+        botonSalir.setFont(customFontButton);
+    }
+
+    @FXML
     protected void onBotonReservas() {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/reservas.fxml"));

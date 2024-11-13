@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -11,7 +12,7 @@
          <children>
             <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" text="Datos del cliente" textAlignment="CENTER" underline="true">
+                  <Label fx:id="labelDatosCliente" alignment="CENTER_RIGHT" text="Datos del cliente" textAlignment="CENTER" underline="true">
                      <font>
                         <Font name="Comic Sans MS Bold" size="24.0" />
                      </font>
@@ -30,7 +31,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="100.0">
                            <children>
-                              <Label text="DNI:">
+                              <Label fx:id="labelDNI" text="DNI:">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -51,7 +52,7 @@
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="100.0">
                            <children>
-                              <Label text="Nombre:">
+                              <Label fx:id="labelNombre" text="Nombre:">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -79,7 +80,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="100.0">
                            <children>
-                              <Label text="Dirección:">
+                              <Label fx:id="labelDireccion" text="Dirección:">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -111,7 +112,7 @@
                               <Insets right="10.0" />
                            </padding>
                            <children>
-                              <Label text="Localidad:">
+                              <Label fx:id="labelLocalidad" text="Localidad:">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -127,7 +128,7 @@
                            </children></HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="100.0">
                            <children>
-                              <Label text="Provincia:">
+                              <Label fx:id="labelProvincia" text="Provincia:">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -153,7 +154,201 @@
             </VBox>
          </children>
       </VBox>
-      <VBox prefHeight="330.0" prefWidth="100.0" />
-      <VBox prefHeight="240.0" prefWidth="100.0" />
+      <VBox prefHeight="330.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="labelDatosReserva" alignment="CENTER_RIGHT" text="Datos de la reserva" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox prefHeight="280.0" prefWidth="1260.0">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="280.0" prefWidth="350.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="150.0">
+                                 <children>
+                                    <Label fx:id="labelFechaEntrada" text="Fecha de entrada:">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker fx:id="datePickerFechaEntrada" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="150.0">
+                                 <children>
+                                    <Label fx:id="labelFechaSalida" text="Fecha de salida:">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker fx:id="datePickerFechaSalida" />
+                                 </children>
+                              </HBox>
+                           </children></HBox>
+                        <HBox prefHeight="50.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefWidth="150.0">
+                                 <children>
+                                    <Label fx:id="labelNumeroHabitaciones" text="Número de&#10;habitaciones:" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="textFieldNumeroHabitaciones" prefWidth="175.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefWidth="150.0">
+                                 <children>
+                                    <Label fx:id="labelTipoHabitacion" text="Tipo de habitación:">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="200.0">
+                                 <children>
+                                    <ChoiceBox fx:id="choiceBoxTipoHabitacion" prefWidth="175.0" />
+                                 </children>
+                              </HBox>
+                           </children></HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0">
+                           <children>
+                              <CheckBox fx:id="checkBoxfumador" mnemonicParsing="false" text="Fumador">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children></HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="910.0">
+                     <children>
+                        <ImageView fitHeight="280.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/habitacion-uno.jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="280.0" prefWidth="188.0">
+                           <children>
+                              <ImageView fitHeight="140.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/habitacion-dos.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="140.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/habitacion-cuatro.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="558.0" layoutY="10.0" prefHeight="280.0" prefWidth="188.0">
+                           <children>
+                              <ImageView fitHeight="140.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/habitacion-cinco.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="140.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/habitacion-tres.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox prefHeight="240.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0">
+               <children>
+                  <Label fx:id="labelRegimen" text="Regimen">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="Alojamiento y pensión">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupRegimen" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Media pensión" toggleGroup="$toggleGroupRegimen">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Pensión completa" toggleGroup="$toggleGroupRegimen">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font></RadioButton>
+               </children>
+            </VBox>
+            <HBox prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin></VBox>
    </children>
 </VBox>
