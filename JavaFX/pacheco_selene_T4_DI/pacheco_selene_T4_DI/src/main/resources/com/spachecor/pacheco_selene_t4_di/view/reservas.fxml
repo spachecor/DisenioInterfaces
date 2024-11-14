@@ -73,8 +73,14 @@
                                  </HBox.margin>
                               </TextField>
                            </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
                         </HBox>
                      </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
                   </HBox>
                   <HBox prefHeight="33.333333333" prefWidth="200.0">
                      <children>
@@ -101,6 +107,9 @@
                               </TextField>
                            </children></HBox>
                      </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
                   </HBox>
                   <HBox prefHeight="33.333333333" prefWidth="200.0">
                      <children>
@@ -253,7 +262,7 @@
                            </children></HBox>
                         <HBox alignment="CENTER" prefHeight="50.0">
                            <children>
-                              <CheckBox fx:id="checkBoxfumador" mnemonicParsing="false" text="Fumador">
+                              <CheckBox fx:id="checkBoxfumador" mnemonicParsing="false" onAction="#onCheckBoxfumador" text="Fumador">
                                  <font>
                                     <Font name="Comic Sans MS Bold" size="14.0" />
                                  </font>
@@ -303,7 +312,7 @@
          </children></VBox>
       <VBox prefHeight="240.0" prefWidth="100.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0">
                <children>
                   <Label fx:id="labelRegimen" text="Regimen">
                      <font>
@@ -312,36 +321,60 @@
                   </Label>
                </children>
             </HBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <HBox prefHeight="140.0" prefWidth="200.0">
                <children>
-                  <RadioButton mnemonicParsing="false" selected="true" text="Alojamiento y pensión">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="toggleGroupRegimen" />
-                     </toggleGroup>
-                     <font>
-                        <Font name="Comic Sans MS Bold" size="14.0" />
-                     </font></RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Media pensión" toggleGroup="$toggleGroupRegimen">
-                     <font>
-                        <Font name="Comic Sans MS Bold" size="14.0" />
-                     </font></RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Pensión completa" toggleGroup="$toggleGroupRegimen">
-                     <font>
-                        <Font name="Comic Sans MS Bold" size="14.0" />
-                     </font></RadioButton>
-               </children>
-            </VBox>
-            <HBox prefHeight="75.0" prefWidth="200.0">
-               <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="350.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
+                        <RadioButton fx:id="radioButtonAlojamientoPension" mnemonicParsing="false" selected="true" text="Alojamiento y pensión">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroupRegimen" />
+                           </toggleGroup>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonMediaPension" mnemonicParsing="false" text="Media pensión" toggleGroup="$toggleGroupRegimen">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonPensionCompleta" mnemonicParsing="false" text="Pensión completa" toggleGroup="$toggleGroupRegimen">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="910.0">
+                     <children>
+                        <Label fx:id="labelFumador" textAlignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding></Label>
+                        <Label fx:id="labelAviso" textAlignment="CENTER" textFill="RED" />
+                     </children></VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="630.0">
+                     <children>
+                        <Button fx:id="buttonLimpiar" mnemonicParsing="false" onAction="#onButtonLimpiar" text="Limpiar" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_RIGHT" prefWidth="630.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button fx:id="buttonAceptar" mnemonicParsing="false" onAction="#onButtonAceptar" text="Aceptar" />
+                        <Button fx:id="buttonCancelar" mnemonicParsing="false" onAction="#onButtonCancelar" text="Cancelar">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin></Button>
                      </children>
                   </HBox>
                </children>
