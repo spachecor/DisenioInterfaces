@@ -243,6 +243,24 @@
                               </HBox>
                            </children>
                         </HBox>
+                        <HBox layoutX="10.0" layoutY="125.0" prefHeight="50.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefWidth="150.0">
+                                 <children>
+                                    <Label fx:id="labelNumeroPersonas" text="Número de&#10;personas:" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="textFieldNumeroPersonas" prefWidth="175.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                         <HBox prefHeight="50.0">
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefWidth="150.0">
