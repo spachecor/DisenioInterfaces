@@ -16,7 +16,7 @@ public class Main extends Application {
     public static Font customFontNormal;
     public static Font customFontMedium;
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage){
         customFontButton = Font.loadFont(Main.class.getResourceAsStream("/com/spachecor/pacheco_selene_t4_di/fonts/AustieBostKittenKlub.ttf"), 24);
         customFontNormal = Font.loadFont(Main.class.getResourceAsStream("/com/spachecor/pacheco_selene_t4_di/fonts/AustieBostKittenKlub.ttf"), 14);
         customFontMedium = Font.loadFont(Main.class.getResourceAsStream("/com/spachecor/pacheco_selene_t4_di/fonts/AustieBostKittenKlub.ttf"), 18);
