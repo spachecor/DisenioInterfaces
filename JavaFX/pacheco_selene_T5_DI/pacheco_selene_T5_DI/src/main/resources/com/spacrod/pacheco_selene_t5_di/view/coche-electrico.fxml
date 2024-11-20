@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spacrod.pacheco_selene_t5_di.controller.CocheElectricoController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <VBox prefHeight="150.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="50.0" text="Datos del cliente">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelNombre" text="Nombre" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <TextField fx:id="textFieldNombre">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelApellidos" text="Apellidos" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <TextField fx:id="textFieldApellidos">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelTelefono" text="Teléfono" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <TextField fx:id="textFieldTelefono">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelDNI" text="DNI" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <TextField fx:id="textFieldDNI">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></VBox>
+      <VBox prefHeight="430.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+               <children>
+                  <Label text="Datos de la reserva">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="380.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="630.0">
+                     <children>
+                        <HBox prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <Label fx:id="labelFechaInicio" text="Fecha de inicio">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <DatePicker fx:id="datePickerFechaInicio">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></DatePicker>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="168.0" prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <Label fx:id="labelFechaFin" text="Fecha de fin">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <DatePicker fx:id="datePickerFechaFin">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></DatePicker>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="136.0" prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <Label fx:id="labelTipoVehiculo" text="Tipo de vehículo">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <ChoiceBox fx:id="choiceBoxTipoVehiculo" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></ChoiceBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="104.0" prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <Label fx:id="labelEdadConductor" text="Edad del conductor">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <ChoiceBox fx:id="choiceBoxEdadConductor" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></ChoiceBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="¿Necesita cable de carga?">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></CheckBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="40.0" prefHeight="63.33" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <Label fx:id="labelKM" text="Nª de kilómetros que realizará">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                                 <children>
+                                    <ChoiceBox fx:id="choiceBoxKM" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></ChoiceBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <VBox alignment="CENTER" prefWidth="630.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Servicios extra">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="305.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Cadenas" />
+                              <CheckBox layoutX="284.0" layoutY="167.0" mnemonicParsing="false" text="Cancelación gratuita" />
+                              <CheckBox layoutX="284.0" layoutY="175.0" mnemonicParsing="false" text="Seguro a todo riesgo" />
+                              <CheckBox layoutX="284.0" layoutY="167.0" mnemonicParsing="false" text="Silla infantil" />
+                              <CheckBox fx:id="checkBoxNoPrecisa" layoutX="284.0" layoutY="158.0" mnemonicParsing="false" text="No precisa" />
+                           </children>
+                           <padding>
+                              <Insets left="250.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="labelError" />
+               </children>
+            </VBox>
+            <HBox prefHeight="50.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="630.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Limpiar" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="630.0">
+                     <children>
+                        <Button fx:id="buttonConfirmar" mnemonicParsing="false" onAction="#onClickButtonConfirmar" text="Confirmar">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#onClickButtonSalir" style="-fx-background-color: #900000;" text="Salir" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</VBox>
