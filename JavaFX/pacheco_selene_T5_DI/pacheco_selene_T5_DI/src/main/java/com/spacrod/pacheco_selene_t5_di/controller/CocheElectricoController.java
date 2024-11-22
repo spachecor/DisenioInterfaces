@@ -4,8 +4,10 @@ import com.spacrod.pacheco_selene_t5_di.service.FXService;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 
 public class CocheElectricoController {
@@ -50,6 +52,14 @@ public class CocheElectricoController {
     @FXML
     private CheckBox checkBoxNoPrecisa;
     @FXML
+    private CheckBox checkBoxSillaInfantil;
+    @FXML
+    private CheckBox checkBoxSeguroTodoRiesgo;
+    @FXML
+    private CheckBox checkBoxCancelacionGratuita;
+    @FXML
+    private CheckBox checkBoxCadenas;
+    @FXML
     private Button buttonConfirmar;
 
     @FXML
@@ -75,29 +85,73 @@ public class CocheElectricoController {
         choiceBoxEdadConductor.getItems().addAll(edades);
         choiceBoxKM.getItems().addAll(kms);
         //ponemos los tooltips en los campos
-        FXService.configureLabelWithMnemonic(labelNombre, "_Nombre", textFieldNombre);
-        FXService.configureLabelWithMnemonic(labelApellidos, "_Apellidos", textFieldApellidos);
-        FXService.configureLabelWithMnemonic(labelTelefono, "_Telefono", textFieldTelefono);
-        FXService.configureLabelWithMnemonic(labelDNI, "_DNI", textFieldDNI);
-        FXService.configureLabelWithMnemonic(labelFechaInicio, "_FechaInicio", datePickerFechaInicio);
-        FXService.configureLabelWithMnemonic(labelFechaFin, "_FechaFin", datePickerFechaFin);
-        FXService.configureLabelWithMnemonic(labelTipoVehiculo, "_Tipo de Vehículo", choiceBoxTipoVehiculo);
-        FXService.configureLabelWithMnemonic(labelEdadConductor, "_Edad del conductor", choiceBoxEdadConductor);
-        FXService.configureLabelWithMnemonic(labelKM, "Nª de _kilómetros que realizará", choiceBoxKM);
+        FXService.configureLabelWithMnemonic(labelNombre, textFieldNombre);
+        FXService.configureLabelWithMnemonic(labelApellidos, textFieldApellidos);
+        FXService.configureLabelWithMnemonic(labelTelefono, textFieldTelefono);
+        FXService.configureLabelWithMnemonic(labelDNI, textFieldDNI);
+        FXService.configureLabelWithMnemonic(labelFechaInicio, datePickerFechaInicio);
+        FXService.configureLabelWithMnemonic(labelFechaFin, datePickerFechaFin);
+        FXService.configureLabelWithMnemonic(labelTipoVehiculo, choiceBoxTipoVehiculo);
+        FXService.configureLabelWithMnemonic(labelEdadConductor, choiceBoxEdadConductor);
+        FXService.configureLabelWithMnemonic(labelKM, choiceBoxKM);
 
         //ponemos los predefinidos
         choiceBoxTipoVehiculo.setValue(vehiculos.getFirst());
         choiceBoxEdadConductor.setValue(edades.getFirst());
         choiceBoxKM.setValue(kms.getFirst());
         checkBoxNoPrecisa.setSelected(true);
+        datePickerFechaInicio.setValue(LocalDate.now());
+        datePickerFechaFin.setValue(LocalDate.now().plusDays(1));
     }
-
+    @FXML
+    protected void onClickCheckBoxNoPrecisa(){
+        if(checkBoxNoPrecisa.isSelected()){
+            checkBoxCadenas.setSelected(false);
+            checkBoxCancelacionGratuita.setSelected(false);
+            checkBoxSeguroTodoRiesgo.setSelected(false);
+            checkBoxSillaInfantil.setSelected(false);
+        }
+    }
+    @FXML
+    protected void onClickOthersCheckBoxs(){
+        checkBoxNoPrecisa.setSelected(false);
+    }
     @FXML
     protected void onClickButtonSalir(){
         FXService.cambiarVentana(FXService.VENTANA_MAIN);
     }
     @FXML
     protected void onClickButtonConfirmar(){
+        if(validateFields()){
+            labelError.setText("Formulario enviado con éxito.");
+        }
+    }
+    private boolean validateFields(){
+        String warningMessage = "";
+        if(!isValidDNI(textFieldDNI.getText())){
+            warningMessage="DNI INVÁLIDO.";
+        }
+        if(containsNumbers(textFieldNombre.getText())){
+            warningMessage="EL CAMPO NOMBRE NO PUEDE CONTENER NÚMEROS.";
+        }
+        if(containsNumbers(textFieldApellidos.getText())){
+            warningMessage="EL CAMPO APELLIDOS NO PUEDE CONTENER NÚMEROS.";
+        }
+        if(!containsNumbers(textFieldTelefono.getText())){
+            warningMessage="EL CAMPO TELÉFONO DEBE CONTENER NÚMEROS.";
+        }
 
+        if(!warningMessage.trim().isEmpty()){
+            labelError.setText(warningMessage);
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidDNI(String dni) {
+        String dniPattern = "\\d{8}[A-HJ-NP-TV-Z]";
+        return Pattern.matches(dniPattern, dni);
+    }
+    private boolean containsNumbers(String input) {
+        return input.matches(".*\\d.*");
     }
 }

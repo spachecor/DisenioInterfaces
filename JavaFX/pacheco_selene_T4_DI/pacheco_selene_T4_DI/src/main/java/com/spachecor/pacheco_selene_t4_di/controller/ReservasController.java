@@ -215,7 +215,7 @@ public class ReservasController {
         }
 
         if (!warningMessage.isEmpty()) {
-            labelAviso.setText(warningMessage.toString());
+            labelAviso.setText(warningMessage);
             return false;
         }
         return true;

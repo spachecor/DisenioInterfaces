@@ -4,8 +4,10 @@ import com.spacrod.pacheco_selene_t5_di.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class FXService {
     public static final String VENTANA_MAIN;
@@ -19,6 +21,7 @@ public class FXService {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/"+ventana));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
             Main.stage.setTitle("CarroCómico - Alquiler de Vehículos");
+            Main.stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/com/spacrod/pacheco_selene_t5_di/img/icono.png"))));
             Main.stage.setScene(scene);
             Main.stage.show();
         }catch(IOException e){
@@ -26,21 +29,5 @@ public class FXService {
             System.exit(1);
         }
     }
-    public static void configureLabelWithMnemonic(Label label, String textWithMnemonic, Control control) {
-        label.setText(textWithMnemonic);
-        label.setMnemonicParsing(true);
-        label.setLabelFor(control);
-
-        if (control instanceof TextField) {
-            label.setOnKeyPressed(event -> control.requestFocus());
-        } else if (control instanceof DatePicker) {
-            label.setOnKeyPressed(event -> control.requestFocus());
-        } else if (control instanceof CheckBox) {
-            label.setOnKeyPressed(event -> control.requestFocus());
-        } else if (control instanceof ChoiceBox) {
-            label.setOnKeyPressed(event -> control.requestFocus());
-        } else if (control instanceof RadioButton) {
-            label.setOnKeyPressed(event -> control.requestFocus());
-        }
-    }
+    public static void configureLabelWithMnemonic(Label label, Control control) {label.setLabelFor(control);}
 }

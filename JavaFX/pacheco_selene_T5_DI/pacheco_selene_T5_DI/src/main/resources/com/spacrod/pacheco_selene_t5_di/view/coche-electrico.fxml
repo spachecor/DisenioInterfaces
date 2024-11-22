@@ -27,7 +27,7 @@
                      <children>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="labelNombre" text="Nombre" />
+                              <Label fx:id="labelNombre" mnemonicParsing="true" text="_Nombre" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
@@ -44,7 +44,7 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="labelApellidos" text="Apellidos" />
+                              <Label fx:id="labelApellidos" mnemonicParsing="true" text="_Apellidos" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
@@ -62,7 +62,7 @@
                      <children>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="labelTelefono" text="Teléfono" />
+                              <Label fx:id="labelTelefono" mnemonicParsing="true" text="_Teléfono" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
@@ -76,7 +76,7 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="labelDNI" text="DNI" />
+                              <Label fx:id="labelDNI" mnemonicParsing="true" text="_DNI" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
@@ -112,7 +112,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelFechaInicio" text="Fecha de inicio">
+                                    <Label fx:id="labelFechaInicio" mnemonicParsing="true" text="_Fecha de inicio">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -132,7 +132,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelFechaFin" text="Fecha de fin">
+                                    <Label fx:id="labelFechaFin" mnemonicParsing="true" text="_Fecha de fin">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -152,7 +152,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelTipoVehiculo" text="Tipo de vehículo">
+                                    <Label fx:id="labelTipoVehiculo" mnemonicParsing="true" text="_Tipo de vehículo">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -172,7 +172,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelEdadConductor" text="Edad del conductor">
+                                    <Label fx:id="labelEdadConductor" mnemonicParsing="true" text="_Edad del conductor">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -200,7 +200,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelKM" text="Nª de kilómetros que realizará">
+                                    <Label fx:id="labelKM" mnemonicParsing="true" text="_Nª de kilómetros que realizará">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -229,11 +229,11 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="305.0" prefWidth="100.0" spacing="30.0">
                            <children>
-                              <CheckBox mnemonicParsing="false" text="Cadenas" />
-                              <CheckBox layoutX="284.0" layoutY="167.0" mnemonicParsing="false" text="Cancelación gratuita" />
-                              <CheckBox layoutX="284.0" layoutY="175.0" mnemonicParsing="false" text="Seguro a todo riesgo" />
-                              <CheckBox layoutX="284.0" layoutY="167.0" mnemonicParsing="false" text="Silla infantil" />
-                              <CheckBox fx:id="checkBoxNoPrecisa" layoutX="284.0" layoutY="158.0" mnemonicParsing="false" text="No precisa" />
+                              <CheckBox fx:id="checkBoxCadenas" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Cadenas" />
+                              <CheckBox fx:id="checkBoxCancelacionGratuita" layoutX="284.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Cancelación gratuita" />
+                              <CheckBox fx:id="checkBoxSeguroTodoRiesgo" layoutX="284.0" layoutY="175.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Seguro a todo riesgo" />
+                              <CheckBox fx:id="checkBoxSillaInfantil" layoutX="284.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Silla infantil" />
+                              <CheckBox fx:id="checkBoxNoPrecisa" layoutX="284.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickCheckBoxNoPrecisa" text="No precisa" />
                            </children>
                            <padding>
                               <Insets left="250.0" />
@@ -250,7 +250,10 @@
          <children>
             <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="labelError" />
+                  <Label fx:id="labelError" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
                </children>
             </VBox>
             <HBox prefHeight="50.0">
