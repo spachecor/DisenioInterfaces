@@ -14,12 +14,12 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="630.0">
                <children>
-                  <MenuBar>
+                  <MenuBar fx:id="menuBarOpciones">
                     <menus>
-                      <Menu mnemonicParsing="false" text="Opciones">
+                      <Menu mnemonicParsing="true" text="_Opciones">
                         <items>
-                          <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemCocheElectrico" text="Coche eléctrico" />
-                              <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemBicicletaElectrica" text="Biclibleta eléctrica" />
+                          <MenuItem mnemonicParsing="true" onAction="#onClickMenuItemCocheElectrico" text="_Coche eléctrico" />
+                              <MenuItem mnemonicParsing="true" onAction="#onClickMenuItemBicicletaElectrica" text="_Biclibleta eléctrica" />
                         </items>
                       </Menu>
                     </menus>
@@ -28,14 +28,18 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="630.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#onClickButtonSalir" style="-fx-background-color: #900000;" text="Salir" textFill="WHITE" />
+                  <Button fx:id="buttonSalir" mnemonicParsing="true" onAction="#onClickButtonSalir" style="-fx-background-color: #900000;" text="_Salir" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip fx:id="toolTipSalir" text="Cerrar aplicación" />
+                     </tooltip>
+                  </Button>
                </children>
             </HBox>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
          <children>
-            <Label text="Elija el vehículo que desee alquilar" />
+            <Label fx:id="labelElegir" text="Elija el vehículo que desee alquilar" />
          </children></HBox>
       <HBox prefHeight="480.0" prefWidth="200.0">
          <children>
@@ -49,7 +53,11 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" onAction="#onClickMenuItemCocheElectrico" text="Coche eléctrico" />
+                  <Button fx:id="buttonCocheElectrico" mnemonicParsing="true" onAction="#onClickMenuItemCocheElectrico" text="_Coche eléctrico">
+                     <tooltip>
+                        <Tooltip fx:id="toolTipCocheElectrico" text="Reservar un coche eléctrico" />
+                     </tooltip>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="620.0">
@@ -62,13 +70,17 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" onAction="#onClickMenuItemBicicletaElectrica" text="Bicicleta eléctrica" />
+                  <Button fx:id="buttonBicicletaElectrica" mnemonicParsing="true" onAction="#onClickMenuItemBicicletaElectrica" text="_Bicicleta eléctrica">
+                     <tooltip>
+                        <Tooltip fx:id="toolTipBicicletaElectrica" text="Reservar una bicicleta eléctrica" />
+                     </tooltip>
+                  </Button>
                </children>
             </VBox>
          </children></HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label fx:id="labelError" />
+            <Label fx:id="labelError" textFill="RED" />
          </children></HBox>
    </children>
 </VBox>

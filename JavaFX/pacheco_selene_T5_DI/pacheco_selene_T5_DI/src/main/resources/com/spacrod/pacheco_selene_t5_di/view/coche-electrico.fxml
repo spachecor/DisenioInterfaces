@@ -14,7 +14,7 @@
          <children>
             <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
                <children>
-                  <Label prefHeight="50.0" text="Datos del cliente">
+                  <Label fx:id="labelDatosCliente" prefHeight="50.0" text="Datos del cliente">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -33,6 +33,9 @@
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
                            <children>
                               <TextField fx:id="textFieldNombre">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipNombre" text="Nombre del cliente" />
+                                 </tooltip>
                                  <VBox.margin>
                                     <Insets right="20.0" />
                                  </VBox.margin>
@@ -50,6 +53,9 @@
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
                            <children>
                               <TextField fx:id="textFieldApellidos">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipApellidos" text="Apellidos del cliente" />
+                                 </tooltip>
                                  <VBox.margin>
                                     <Insets right="20.0" />
                                  </VBox.margin>
@@ -68,6 +74,9 @@
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
                            <children>
                               <TextField fx:id="textFieldTelefono">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipTelefono" text="Teléfono del cliente" />
+                                 </tooltip>
                                  <VBox.margin>
                                     <Insets right="20.0" />
                                  </VBox.margin>
@@ -82,6 +91,9 @@
                         <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0">
                            <children>
                               <TextField fx:id="textFieldDNI">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipDNI" text="DNI del cliente" />
+                                 </tooltip>
                                  <VBox.margin>
                                     <Insets right="20.0" />
                                  </VBox.margin>
@@ -97,7 +109,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="50.0">
                <children>
-                  <Label text="Datos de la reserva">
+                  <Label fx:id="labelDatosReserva" text="Datos de la reserva">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -121,6 +133,9 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
                                     <DatePicker fx:id="datePickerFechaInicio">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipFechaInicio" text="Fecha de inicio" />
+                                       </tooltip>
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin></DatePicker>
@@ -141,6 +156,9 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
                                     <DatePicker fx:id="datePickerFechaFin">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipFechaFin" text="Fecha de fin" />
+                                       </tooltip>
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin></DatePicker>
@@ -161,6 +179,9 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
                                     <ChoiceBox fx:id="choiceBoxTipoVehiculo" prefWidth="175.0">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipTipoVehiculo" text="Tipo de Vehículo" />
+                                       </tooltip>
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin></ChoiceBox>
@@ -181,6 +202,9 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
                                     <ChoiceBox fx:id="choiceBoxEdadConductor" prefWidth="175.0">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipEdadConductor" text="Edad del conductor" />
+                                       </tooltip>
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin></ChoiceBox>
@@ -190,7 +214,10 @@
                         </HBox>
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" prefHeight="63.33" prefWidth="200.0">
                            <children>
-                              <CheckBox mnemonicParsing="false" text="¿Necesita cable de carga?">
+                              <CheckBox fx:id="checkBoxCableCarga" mnemonicParsing="true" text="¿_Necesita cable de carga?">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipCableCarga" text="¿Necesita cable de carga?" />
+                                 </tooltip>
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin></CheckBox>
@@ -200,7 +227,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
-                                    <Label fx:id="labelKM" mnemonicParsing="true" text="_Nª de kilómetros que realizará">
+                                    <Label fx:id="labelKM" mnemonicParsing="true" text="_Num. de kilómetros que realizará">
                                        <HBox.margin>
                                           <Insets right="10.0" />
                                        </HBox.margin></Label>
@@ -209,6 +236,9 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
                                  <children>
                                     <ChoiceBox fx:id="choiceBoxKM" prefWidth="175.0">
+                                       <tooltip>
+                                          <Tooltip fx:id="toolTipKM" text="Nº KMs" />
+                                       </tooltip>
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin></ChoiceBox>
@@ -221,7 +251,7 @@
                      <children>
                         <VBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="100.0">
                            <children>
-                              <Label text="Servicios extra">
+                              <Label fx:id="labelServiciosExtra" text="Servicios extra">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font></Label>
@@ -229,11 +259,31 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="305.0" prefWidth="100.0" spacing="30.0">
                            <children>
-                              <CheckBox fx:id="checkBoxCadenas" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Cadenas" />
-                              <CheckBox fx:id="checkBoxCancelacionGratuita" layoutX="284.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Cancelación gratuita" />
-                              <CheckBox fx:id="checkBoxSeguroTodoRiesgo" layoutX="284.0" layoutY="175.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Seguro a todo riesgo" />
-                              <CheckBox fx:id="checkBoxSillaInfantil" layoutX="284.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClickOthersCheckBoxs" text="Silla infantil" />
-                              <CheckBox fx:id="checkBoxNoPrecisa" layoutX="284.0" layoutY="158.0" mnemonicParsing="false" onAction="#onClickCheckBoxNoPrecisa" text="No precisa" />
+                              <CheckBox fx:id="checkBoxCadenas" mnemonicParsing="true" onAction="#onClickOthersCheckBoxs" text="_Cadenas">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipServiciosExtraUno" text="Selecciona un extra" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxCancelacionGratuita" layoutX="284.0" layoutY="167.0" mnemonicParsing="true" onAction="#onClickOthersCheckBoxs" text="_Cancelación gratuita">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipServiciosExtraDos" text="Selecciona un extra" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxSeguroTodoRiesgo" layoutX="284.0" layoutY="175.0" mnemonicParsing="true" onAction="#onClickOthersCheckBoxs" text="_Seguro a todo riesgo">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipServiciosExtraTres" text="Selecciona un extra" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxSillaInfantil" layoutX="284.0" layoutY="167.0" mnemonicParsing="true" onAction="#onClickOthersCheckBoxs" text="_Silla infantil">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipServiciosExtraCuatro" text="Selecciona un extra" />
+                                 </tooltip>
+                              </CheckBox>
+                              <CheckBox fx:id="checkBoxNoPrecisa" layoutX="284.0" layoutY="158.0" mnemonicParsing="true" onAction="#onClickCheckBoxNoPrecisa" text="_No precisa">
+                                 <tooltip>
+                                    <Tooltip fx:id="toolTipServiciosExtraCinco" text="Selecciona un extra" />
+                                 </tooltip>
+                              </CheckBox>
                            </children>
                            <padding>
                               <Insets left="250.0" />
@@ -260,16 +310,27 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="630.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Limpiar" />
+                        <Button fx:id="buttonLimpiar" mnemonicParsing="true" onAction="#onClickButtonLimpiar" text="_Limpiar">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipLimpiar" text="Limpiar todos los campos" />
+                           </tooltip>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="630.0">
                      <children>
-                        <Button fx:id="buttonConfirmar" mnemonicParsing="false" onAction="#onClickButtonConfirmar" text="Confirmar">
+                        <Button fx:id="buttonConfirmar" mnemonicParsing="true" onAction="#onClickButtonConfirmar" text="_Confirmar">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipConfirmar" text="Limpiar todos los campos" />
+                           </tooltip>
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin></Button>
-                        <Button mnemonicParsing="false" onAction="#onClickButtonSalir" style="-fx-background-color: #900000;" text="Salir" textFill="WHITE" />
+                        <Button fx:id="buttonSalir" mnemonicParsing="true" onAction="#onClickButtonSalir" style="-fx-background-color: #900000;" text="_Salir" textFill="WHITE">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipSalir" text="Limpiar todos los campos" />
+                           </tooltip>
+                        </Button>
                      </children>
                   </HBox>
                </children>
