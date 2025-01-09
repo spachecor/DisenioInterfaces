@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spacrod.pacheco_selene_examen_di.controllers.LoginController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1240.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/candado.png" />
+               </image>
+            </ImageView>
+            <Label text="Control de Acceso de Usuarios&#10;Hospital Virgen del Rocío" textAlignment="CENTER" textFill="#002357">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="48.0" />
+               </font></Label>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="labelError" textFill="RED">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="1240.0">
+         <children>
+            <TextField fx:id="textFieldUsuario" prefWidth="500.0" promptText="Usuario">
+               <tooltip>
+                  <Tooltip fx:id="toolTipTextFieldUsuario" text="Usuario" />
+               </tooltip>
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </TextField>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1240.0">
+         <children>
+            <PasswordField fx:id="textFieldContrasena" prefWidth="500.0" promptText="Contraseña">
+               <tooltip>
+                  <Tooltip fx:id="toolTipTextFieldContrasena" text="Contraseña" />
+               </tooltip>
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </PasswordField>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="240.0" prefWidth="1240.0">
+         <children>
+            <Button mnemonicParsing="true" onAction="#onClickButtonAceptar" text="_Aceptar" textFill="#002357">
+               <tooltip>
+                  <Tooltip fx:id="toolTipButtonAceptar" text="Aceptar e ir a Citas" />
+               </tooltip>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="true" onAction="#onClickButtonCancelar" text="_Cancelar" textFill="#002357">
+               <tooltip>
+                  <Tooltip fx:id="toolTipButtonCancelar" text="Cancelar e ir al menú principal" />
+               </tooltip>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

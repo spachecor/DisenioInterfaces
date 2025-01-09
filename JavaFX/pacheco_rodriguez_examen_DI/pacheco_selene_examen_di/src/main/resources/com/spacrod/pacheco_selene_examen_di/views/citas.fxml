@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spacrod.pacheco_selene_examen_di.controllers.CitasController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1240.0">
+         <children>
+            <Label text="Gestión de citas - Hospital Virgen del Rocío" textFill="#002357">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="36.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="250.0" prefWidth="1240.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelNombre" mnemonicParsing="true" text="_Nombre" textFill="#002357" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1140.0">
+                     <children>
+                        <TextField fx:id="textFieldNombre" prefWidth="1140.0" promptText="Nombre">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipTextFielNombre" text="Nombre del paciente" />
+                           </tooltip>
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelApellidos" mnemonicParsing="true" text="_Apellidos" textFill="#002357" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1140.0">
+                     <children>
+                        <TextField fx:id="textFieldApellidos" minWidth="1140.0" promptText="Apellidos">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipTextFieldApellidos" text="Apellidos del paciente" />
+                           </tooltip>
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelDNI" mnemonicParsing="true" text="_Dni" textFill="#002357" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1140.0">
+                     <children>
+                        <TextField fx:id="textFieldDNI" prefWidth="200.0" promptText="DNI">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipTextFieldDNI" text="DNI del paciente" />
+                           </tooltip>
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelEspecialidad" mnemonicParsing="true" text="_Especialidad" textFill="#002357" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1140.0">
+                     <children>
+                        <ChoiceBox fx:id="choiceBoxEspecialidad" prefWidth="200.0">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipChoiceBoxEspecialidad" text="Especialidad para la cita" />
+                           </tooltip>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelFechaCita" mnemonicParsing="true" text="_Fecha Cita" textFill="#002357" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1140.0">
+                     <children>
+                        <DatePicker fx:id="datePickerFechaCita" prefWidth="200.0" promptText="Fecha Cita">
+                           <tooltip>
+                              <Tooltip fx:id="toolTipDatePickerFechaCita" text="Fecha para la cita" />
+                           </tooltip>
+                        </DatePicker>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="190.0" prefWidth="1240.0">
+         <children>
+            <Label fx:id="labelError" textFill="RED">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font></Label>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="190.0" prefWidth="1240.0">
+         <children>
+            <Button mnemonicParsing="true" onAction="#onClickConfirmar" text="_Confirmar" textFill="#002357">
+               <tooltip>
+                  <Tooltip fx:id="toolTipButtonConfirmar" text="Confirmar y agendar la cita" />
+               </tooltip>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="true" onAction="#onClickLimpiar" text="_Limpiar" textFill="#002357">
+               <tooltip>
+                  <Tooltip fx:id="toolTipButtonLimpiar" text="Limpiar todos los campos" />
+               </tooltip>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="true" onAction="#onClickAtras" text="_Atrás" textFill="#002357">
+               <tooltip>
+                  <Tooltip fx:id="toolTipButtonAtras" text="Cancelar e ir al menú principal" />
+               </tooltip>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
