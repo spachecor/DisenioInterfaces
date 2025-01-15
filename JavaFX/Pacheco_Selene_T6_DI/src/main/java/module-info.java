@@ -1,6 +1,7 @@
 module com.spacrod.pacheco_selene_t6_di {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.spacrod.pacheco_selene_t6_di to javafx.fxml;

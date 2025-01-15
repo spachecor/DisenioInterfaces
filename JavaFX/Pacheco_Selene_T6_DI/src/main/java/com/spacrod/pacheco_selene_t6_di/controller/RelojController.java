@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.util.Duration;
 
+import javax.swing.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -50,7 +51,7 @@ public class RelojController {
         updateClock();
 
         // Configurar las propiedades del reloj
-        this.set24HourFormat(false); // Formato de 12 horas
+        this.set24HourFormat(true); // Formato de 24 horas
         this.setAlarmEnabled(false); // Desactivar la alarma
     }
 
@@ -63,6 +64,7 @@ public class RelojController {
             this.set24HourFormat(true);
             this.formatoToggleButton.setText("Formato 24 horas");
         }
+        this.rellenarChoiceBoxs();
     }
 
     @FXML
@@ -78,7 +80,7 @@ public class RelojController {
                 this.setAlarmMessage(this.mensajeTextField.getText());
                 this.alarmToggleButton.setText("Alarma activada");
             }else{
-                System.out.println("NO SE PUEDE PUTO");
+                JOptionPane.showMessageDialog(null, "Debes introducir un componente!!!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -96,7 +98,7 @@ public class RelojController {
     }
 
     private void triggerAlarm() {
-        System.out.println(this.getAlarmMessage());
+        JOptionPane.showMessageDialog(null, this.getAlarmMessage(), "Alarma", JOptionPane.INFORMATION_MESSAGE);
         this.onClickAlarmToggleButton();
         this.horaChoiceBox.getSelectionModel().select(0);
         this.minutoChoiceBox.getSelectionModel().select(0);
@@ -105,12 +107,21 @@ public class RelojController {
 
     private void rellenarChoiceBoxs() {
         List<Integer> horas = new ArrayList<>();
-        for (int i = 1; i <= 12; i++) {
-            horas.add(i);
-        }
         List<Integer> minutos = new ArrayList<>();
-        for (int i = 1; i <= 59; i++) {
-            minutos.add(i);
+        if(this.is24HourFormat()) {
+            for (int i = 1; i <= 24; i++) {
+                horas.add(i);
+            }
+            for (int i = 1; i <= 59; i++) {
+                minutos.add(i);
+            }
+        }else{
+            for (int i = 1; i <= 12; i++) {
+                horas.add(i);
+            }
+            for (int i = 1; i <= 59; i++) {
+                minutos.add(i);
+            }
         }
         this.horaChoiceBox.getItems().clear();
         this.horaChoiceBox.getItems().addAll(horas);
