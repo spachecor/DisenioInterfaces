@@ -1,9 +1,13 @@
 package com.spacrod.pacheco_selene_examen_di.controllers;
 
 import com.spacrod.pacheco_selene_examen_di.services.FXService;
+import com.spacrod.pacheco_selene_t6_di.creacion.NuevoComponente;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+
+import java.io.IOException;
 
 public class LoginController {
     @FXML
@@ -12,6 +16,12 @@ public class LoginController {
     private TextField textFieldContrasena;
     @FXML
     private Label labelError;
+    @FXML
+    private VBox contenedorVBox;
+    @FXML
+    protected void initialize() throws IOException {
+        NuevoComponente.cargarComponente(contenedorVBox, NuevoComponente.RELOJ_COMPONENTE);
+    }
     @FXML
     protected void onClickButtonAceptar(){
         if(validarCampos()){

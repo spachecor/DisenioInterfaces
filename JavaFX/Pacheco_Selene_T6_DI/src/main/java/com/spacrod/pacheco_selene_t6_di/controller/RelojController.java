@@ -80,7 +80,7 @@ public class RelojController {
                 this.setAlarmMessage(this.mensajeTextField.getText());
                 this.alarmToggleButton.setText("Alarma activada");
             }else{
-                JOptionPane.showMessageDialog(null, "Debes introducir un componente!!!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Debes introducir un mensaje!!!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

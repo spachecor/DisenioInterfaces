@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/com/spacrod/pacheco_selene_t6_di" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/com/spacrod/pacheco_selene_t6_di/view" charset="UTF-8" />
   </component>
 </project>

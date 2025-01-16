@@ -24,8 +24,8 @@ public class FXService {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/"+ventana));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
             Main.stage.setTitle("Virgen del Rocío - Gestiones");
-            Main.
-            Main.stage.setScene(scene);stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/com/spacrod/pacheco_selene_examen_di/img/icono.png"))));
+            Main.stage.setScene(scene);
+            Main.stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/com/spacrod/pacheco_selene_examen_di/img/icono.png"))));
             Main.stage.show();
         }catch(IOException e){
             e.printStackTrace();

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Pacheco_Selene_T6_DI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pacheco_Selene_T6_DI_jar</output-path>
+    <root id="archive" name="Pacheco_Selene_T6_DI.jar">
+      <element id="module-output" name="Pacheco_Selene_T6_DI" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+    </root>
+  </artifact>
+</component>
