@@ -41,7 +41,6 @@ public class RelojController {
 
     @FXML
     protected void initialize() {
-        this.rellenarChoiceBoxs();
         // Actualizar el reloj cada segundo
         clockTimeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> updateClock()));
         clockTimeline.setCycleCount(Animation.INDEFINITE);
@@ -51,8 +50,9 @@ public class RelojController {
         updateClock();
 
         // Configurar las propiedades del reloj
-        this.set24HourFormat(true); // Formato de 24 horas
+        this.set24HourFormat(false); // Formato de 12 horas
         this.setAlarmEnabled(false); // Desactivar la alarma
+        this.rellenarChoiceBoxs();
     }
 
     @FXML
@@ -87,14 +87,52 @@ public class RelojController {
 
     private void updateClock() {
         LocalTime now = LocalTime.now();
-        String pattern = this.is24HourFormat()?"hh:mm:ss":"hh:mm:ss a";
+        String pattern = this.is24HourFormat() ? "HH:mm:ss" : "hh:mm:ss a";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         timeLabel.setText(now.format(formatter));
 
         // Verificar si la alarma está activada
-        if (isAlarmEnabled.get() && now.getHour() == alarmHour.get() && now.getMinute() == alarmMinute.get()) {
-            triggerAlarm();
+        if (isAlarmEnabled.get()) {
+            int currentHour = now.getHour();
+            int alarmHourValue = alarmHour.get();
+
+            if (!this.is24HourFormat()) {
+                String period = now.getHour() >= 12 ? "PM" : "AM";
+                if (period.equals("PM") && alarmHourValue < 12) {
+                    alarmHourValue += 12; // Convertir a formato de 24 horas
+                } else if (period.equals("AM") && alarmHourValue == 12) {
+                    alarmHourValue = 0; // Medianoche
+                }
+            }
+
+            if (currentHour == alarmHourValue && now.getMinute() == alarmMinute.get()) {
+                triggerAlarm();
+            }
         }
+    }
+
+    private void rellenarChoiceBoxs() {
+        List<Integer> horas = new ArrayList<>();
+        List<Integer> minutos = new ArrayList<>();
+        if (this.is24HourFormat()) {
+            for (int i = 0; i < 24; i++) {
+                horas.add(i);
+            }
+        } else {
+            for (int i = 0; i <= 12; i++) {
+                horas.add(i);
+            }
+        }
+        for (int i = 0; i < 60; i++) {
+            minutos.add(i);
+        }
+
+        this.horaChoiceBox.getItems().clear();
+        this.horaChoiceBox.getItems().addAll(horas);
+        this.horaChoiceBox.setValue(horas.get(0));
+        this.minutoChoiceBox.getItems().clear();
+        this.minutoChoiceBox.getItems().addAll(minutos);
+        this.minutoChoiceBox.setValue(minutos.get(0));
     }
 
     private void triggerAlarm() {
@@ -103,32 +141,6 @@ public class RelojController {
         this.horaChoiceBox.getSelectionModel().select(0);
         this.minutoChoiceBox.getSelectionModel().select(0);
         this.mensajeTextField.clear();
-    }
-
-    private void rellenarChoiceBoxs() {
-        List<Integer> horas = new ArrayList<>();
-        List<Integer> minutos = new ArrayList<>();
-        if(this.is24HourFormat()) {
-            for (int i = 1; i <= 24; i++) {
-                horas.add(i);
-            }
-            for (int i = 1; i <= 59; i++) {
-                minutos.add(i);
-            }
-        }else{
-            for (int i = 1; i <= 12; i++) {
-                horas.add(i);
-            }
-            for (int i = 1; i <= 59; i++) {
-                minutos.add(i);
-            }
-        }
-        this.horaChoiceBox.getItems().clear();
-        this.horaChoiceBox.getItems().addAll(horas);
-        this.horaChoiceBox.setValue(horas.getFirst());
-        this.minutoChoiceBox.getItems().clear();
-        this.minutoChoiceBox.getItems().addAll(minutos);
-        this.minutoChoiceBox.setValue(minutos.getFirst());
     }
 
     // Getters y setters para las propiedades
