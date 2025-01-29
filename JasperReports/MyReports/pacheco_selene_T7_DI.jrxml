@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pacheco_selene_T7_DI" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d09368a7-7307-4a73-9e69-f89d2ee912e7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="pacheco_selene_T7_DI_DATASET" uuid="a09b005e-cd2c-4d9b-9745-bea8d4683db6">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+		<queryString language="csv">
+			<![CDATA[]]>
+		</queryString>
+		<field name="orderIdentifier" class="java.lang.Integer"/>
+		<field name="orderLineNumber" class="java.lang.Integer"/>
+		<field name="orderType" class="java.lang.String"/>
+		<field name="product.partNumber" class="java.lang.String"/>
+		<field name="shipFromInstructionLocation.locationIdentifier" class="java.lang.String"/>
+		<field name="shipToLocation.locationIdentifier" class="java.lang.String"/>
+		<field name="status" class="java.lang.String"/>
+		<field name="createdDate" class="java.lang.String"/>
+		<field name="requestedShipDate" class="java.lang.String"/>
+		<field name="requestedDeliveryDate" class="java.lang.String"/>
+		<field name="plannedShipDate" class="java.lang.String"/>
+		<field name="plannedDeliveryDate" class="java.lang.String"/>
+		<field name="quantity" class="java.lang.Integer"/>
+		<field name="quantityUnits" class="java.lang.String"/>
+		<field name="productValue" class="java.lang.Integer"/>
+		<field name="value" class="java.lang.Integer"/>
+		<field name="valueCurrency" class="java.lang.String"/>
+		<field name="shipmentCount" class="java.lang.String"/>
+		<group name="orderIdentifier">
+			<groupExpression><![CDATA[$F{orderIdentifier}]]></groupExpression>
+		</group>
+		<group name="orderLineNumber">
+			<groupExpression><![CDATA[$F{orderLineNumber}]]></groupExpression>
+		</group>
+		<group name="orderType">
+			<groupExpression><![CDATA[$F{orderType}]]></groupExpression>
+		</group>
+		<group name="product.partNumber">
+			<groupExpression><![CDATA[$F{product.partNumber}]]></groupExpression>
+		</group>
+		<group name="shipFromInstructionLocation.locationIdentifier">
+			<groupExpression><![CDATA[$F{shipFromInstructionLocation.locationIdentifier}]]></groupExpression>
+		</group>
+		<group name="shipToLocation.locationIdentifier">
+			<groupExpression><![CDATA[$F{shipToLocation.locationIdentifier}]]></groupExpression>
+		</group>
+		<group name="status">
+			<groupExpression><![CDATA[$F{status}]]></groupExpression>
+		</group>
+		<group name="createdDate">
+			<groupExpression><![CDATA[$F{createdDate}]]></groupExpression>
+		</group>
+		<group name="requestedShipDate">
+			<groupExpression><![CDATA[$F{requestedShipDate}]]></groupExpression>
+		</group>
+		<group name="requestedDeliveryDate">
+			<groupExpression><![CDATA[$F{requestedDeliveryDate}]]></groupExpression>
+		</group>
+		<group name="plannedShipDate">
+			<groupExpression><![CDATA[$F{plannedShipDate}]]></groupExpression>
+		</group>
+		<group name="plannedDeliveryDate">
+			<groupExpression><![CDATA[$F{plannedDeliveryDate}]]></groupExpression>
+		</group>
+		<group name="quantity">
+			<groupExpression><![CDATA[$F{quantity}]]></groupExpression>
+		</group>
+		<group name="quantityUnits">
+			<groupExpression><![CDATA[$F{quantityUnits}]]></groupExpression>
+		</group>
+		<group name="productValue">
+			<groupExpression><![CDATA[$F{productValue}]]></groupExpression>
+		</group>
+		<group name="value">
+			<groupExpression><![CDATA[$F{value}]]></groupExpression>
+		</group>
+		<group name="valueCurrency">
+			<groupExpression><![CDATA[$F{valueCurrency}]]></groupExpression>
+		</group>
+		<group name="shipmentCount">
+			<groupExpression><![CDATA[$F{shipmentCount}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="0d7d6677-2cdf-4fae-98dc-4cac3e4317fe">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+		<queryString language="csv">
+			<![CDATA[]]>
+		</queryString>
+		<field name="orderIdentifier" class="java.lang.Integer"/>
+		<field name="orderLineNumber" class="java.lang.Integer"/>
+		<field name="orderType" class="java.lang.String"/>
+		<field name="status" class="java.lang.String"/>
+		<field name="quantity" class="java.lang.Integer"/>
+		<field name="value" class="java.lang.Integer"/>
+		<group name="orderIdentifier">
+			<groupExpression><![CDATA[$F{orderIdentifier}]]></groupExpression>
+		</group>
+		<group name="orderLineNumber">
+			<groupExpression><![CDATA[$F{orderLineNumber}]]></groupExpression>
+		</group>
+		<group name="orderType">
+			<groupExpression><![CDATA[$F{orderType}]]></groupExpression>
+		</group>
+		<group name="status">
+			<groupExpression><![CDATA[$F{status}]]></groupExpression>
+		</group>
+		<group name="quantity">
+			<groupExpression><![CDATA[$F{quantity}]]></groupExpression>
+		</group>
+		<group name="value">
+			<groupExpression><![CDATA[$F{value}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="orderIdentifier" class="java.lang.Integer"/>
+	<field name="orderLineNumber" class="java.lang.Integer"/>
+	<field name="orderType" class="java.lang.String"/>
+	<field name="product.partNumber" class="java.lang.String"/>
+	<field name="shipFromInstructionLocation.locationIdentifier" class="java.lang.String"/>
+	<field name="shipToLocation.locationIdentifier" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="createdDate" class="java.lang.String"/>
+	<field name="requestedShipDate" class="java.lang.String"/>
+	<field name="requestedDeliveryDate" class="java.lang.String"/>
+	<field name="plannedShipDate" class="java.lang.String"/>
+	<field name="plannedDeliveryDate" class="java.lang.String"/>
+	<field name="quantity" class="java.lang.Integer"/>
+	<field name="quantityUnits" class="java.lang.String"/>
+	<field name="productValue" class="java.lang.Integer"/>
+	<field name="value" class="java.lang.Integer"/>
+	<field name="valueCurrency" class="java.lang.String"/>
+	<field name="shipmentCount" class="java.lang.String"/>
+	<group name="orderIdentifier">
+		<groupExpression><![CDATA[$F{orderIdentifier}]]></groupExpression>
+	</group>
+	<group name="orderLineNumber">
+		<groupExpression><![CDATA[$F{orderLineNumber}]]></groupExpression>
+	</group>
+	<group name="orderType">
+		<groupExpression><![CDATA[$F{orderType}]]></groupExpression>
+	</group>
+	<group name="product.partNumber">
+		<groupExpression><![CDATA[$F{product.partNumber}]]></groupExpression>
+	</group>
+	<group name="shipFromInstructionLocation.locationIdentifier">
+		<groupExpression><![CDATA[$F{shipFromInstructionLocation.locationIdentifier}]]></groupExpression>
+	</group>
+	<group name="shipToLocation.locationIdentifier">
+		<groupExpression><![CDATA[$F{shipToLocation.locationIdentifier}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="createdDate">
+		<groupExpression><![CDATA[$F{createdDate}]]></groupExpression>
+	</group>
+	<group name="requestedShipDate">
+		<groupExpression><![CDATA[$F{requestedShipDate}]]></groupExpression>
+	</group>
+	<group name="requestedDeliveryDate">
+		<groupExpression><![CDATA[$F{requestedDeliveryDate}]]></groupExpression>
+	</group>
+	<group name="plannedShipDate">
+		<groupExpression><![CDATA[$F{plannedShipDate}]]></groupExpression>
+	</group>
+	<group name="plannedDeliveryDate">
+		<groupExpression><![CDATA[$F{plannedDeliveryDate}]]></groupExpression>
+	</group>
+	<group name="quantity">
+		<groupExpression><![CDATA[$F{quantity}]]></groupExpression>
+	</group>
+	<group name="quantityUnits">
+		<groupExpression><![CDATA[$F{quantityUnits}]]></groupExpression>
+	</group>
+	<group name="productValue">
+		<groupExpression><![CDATA[$F{productValue}]]></groupExpression>
+	</group>
+	<group name="value">
+		<groupExpression><![CDATA[$F{value}]]></groupExpression>
+	</group>
+	<group name="valueCurrency">
+		<groupExpression><![CDATA[$F{valueCurrency}]]></groupExpression>
+	</group>
+	<group name="shipmentCount">
+		<groupExpression><![CDATA[$F{shipmentCount}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="182" y="24" width="190" height="30" uuid="8e0c6e27-80b0-4672-a2f2-fc2dbc6dd100"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDER LINE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="10" width="229" height="30" uuid="f042566a-98e5-4bc6-a930-2915695b83c4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[ORDER LINE DELATILS: 
+]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="273" splitType="Stretch">
+			<componentElement>
+				<reportElement x="11" y="0" width="533" height="273" uuid="387b5592-f564-4e43-88db-2c69875a66d7">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset2" uuid="d05b2a02-2083-4233-be62-4e302f4412cc">
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="8c0f185a-6a41-4394-9ea9-67e359e4432b">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="246226c8-506a-46fc-a3cc-b327323937da"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Order Identifier]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="5b7516af-70b3-48d4-a57b-80f41020c401"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderIdentifier}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="99" uuid="cb8363fd-0cfb-4002-a879-f35c781bddc1">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="99" height="30" uuid="1e0484f5-e031-4748-9b11-8239d98e51b4"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Order Line
+Number]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="99" height="30" uuid="e8c6d912-436b-4fc5-b7a8-45aab05748dd"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderLineNumber}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="e4a233ae-8ddf-4884-a8d5-985383d099f3">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="b7942bc6-847b-4194-8b85-b82f9571d71d"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Order Type]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="91" height="30" uuid="c0179a41-8b1b-4b15-89bf-81d8f75682c3"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderType}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9c68c48f-6026-454b-837a-059f9496382f">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6a41ab5d-acc3-4fd6-bd75-a8a70e9a52b7"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Status]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="f9eaffb2-2ce6-465f-b83a-2b325737bd15"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="bb6e08ca-f052-4c97-a1fa-cdeaf4fb1824">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="736c7082-11f3-43af-af5c-c5bff2a4255a"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Quantity]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="7061b8de-e8d4-4e0d-beed-720518c0cebe"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="83" uuid="e521a30b-e62b-4c39-9430-15951559e94d">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="83" height="30" uuid="938783f7-ba2c-479a-96b8-2f8a1c583fe9"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Value]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="83" height="30" uuid="ea3d5f8e-34d9-4b28-8b08-704c22dacafc"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50"/>
+	</pageFooter>
+</jasperReport>
