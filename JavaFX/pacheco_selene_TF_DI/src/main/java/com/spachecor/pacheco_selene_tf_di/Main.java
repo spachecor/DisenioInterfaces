@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Main extends Application {
     public static Stage stage;
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage){
         Main.stage = stage;
         FXService.cambiarVentana(FXService.MAIN_VIEW);
     }
