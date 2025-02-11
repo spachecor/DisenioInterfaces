@@ -11,9 +11,11 @@ import com.spachecor.pacheco_selene_tf_di.Main;
 public class FXService {
     public static final String MAIN_VIEW;
     public static final String CLIENTES_VIEW;
+    public static final String PRODUCTOS_VIEW;
     static {
         MAIN_VIEW = "main-view.fxml";
         CLIENTES_VIEW = "clientes-view.fxml";
+        PRODUCTOS_VIEW = "productos-view.fxml";
     }
     /**
      * Método que se encarga de cambiar las ventanas según el nombre de la vista que le pasemos.

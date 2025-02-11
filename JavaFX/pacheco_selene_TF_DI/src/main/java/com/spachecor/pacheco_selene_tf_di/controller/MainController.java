@@ -13,7 +13,7 @@ public class MainController {
     }
     @FXML
     private void onGestionProductosButton(){
-
+        FXService.cambiarVentana(FXService.PRODUCTOS_VIEW);
     }
     @FXML
     private void onGestionPedidosButton(){

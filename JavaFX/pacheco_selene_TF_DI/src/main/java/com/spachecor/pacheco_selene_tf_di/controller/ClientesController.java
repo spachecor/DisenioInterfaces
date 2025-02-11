@@ -49,7 +49,6 @@ public class ClientesController {
         this.cargarListaTable();
     }
 
-
     @FXML
     private void onClickSalirButton(){
         FXService.cambiarVentana(FXService.MAIN_VIEW);
@@ -77,13 +76,11 @@ public class ClientesController {
     private void onModificarClick(){
         this.errorLabel.setText("");
         Cliente cliente = this.clienteTableView.getSelectionModel().getSelectedItem();
-        System.out.println(cliente);
         if(cliente != null&&cliente.getId()!=null
                 &&cliente.getNombre()!=null&&cliente.getTelefono()!=null&&cliente.getDireccion()!=null
                 &&!cliente.getNombre().isEmpty()&&!cliente.getTelefono().isEmpty()&&!cliente.getDireccion().isEmpty()
         ){
             if(!this.nombreTextField.getText().isEmpty()&&!this.telefonoTextField.getText().isEmpty()
-                    &&!this.telefonoTextField.getText().isEmpty()
                     &&!this.direccionTextField.getText().isEmpty()
             ){
                 Cliente clienteAux = new Cliente();
@@ -101,7 +98,7 @@ public class ClientesController {
                 this.limpiarCampos();
                 this.clienteTableView.getSelectionModel().clearSelection();
             }else this.errorLabel.setText("No puede haber campos vacíos.");
-        }else this.errorLabel.setText("Fallo terrible al seleccionar el cliente. Reinicia la aplicación.");
+        }else this.errorLabel.setText("Fallo terrible al seleccionar el cliente.");
     }
     @FXML
     private void onEliminarClick(){
@@ -203,18 +200,6 @@ public class ClientesController {
         this.limpiarCampos();
     }
 
-    private void cargarListaTable() {
-        List<Cliente> clientes = this.clienteService.listar();
-        this.clientesObservableList = FXCollections.observableArrayList();
-        this.clientesObservableList.addAll(clientes);
-        this.clienteTableView.setItems(this.clientesObservableList);
-    }
-    private void limpiarCampos(){
-        this.nombreTextField.setText("");
-        this.telefonoTextField.setText("");
-        this.direccionTextField.setText("");
-        this.errorLabel.setText("");
-    }
     /**
      * Método que selecciona el producto que hemos seleccionado en la tabla de la vista
      */
@@ -229,5 +214,18 @@ public class ClientesController {
             this.telefonoTextField.setText(cliente.getTelefono());
             this.direccionTextField.setText(cliente.getDireccion());
         }
+    }
+
+    private void cargarListaTable() {
+        List<Cliente> clientes = this.clienteService.listar();
+        this.clientesObservableList = FXCollections.observableArrayList();
+        this.clientesObservableList.addAll(clientes);
+        this.clienteTableView.setItems(this.clientesObservableList);
+    }
+    private void limpiarCampos(){
+        this.nombreTextField.setText("");
+        this.telefonoTextField.setText("");
+        this.direccionTextField.setText("");
+        this.errorLabel.setText("");
     }
 }

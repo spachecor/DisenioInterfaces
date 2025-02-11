@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F4F2F3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spachecor.pacheco_selene_tf_di.controller.ProductosController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1280.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="640.0">
+               <children>
+                  <Label text="Gestión de Productos" textFill="#230903">
+                     <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="640.0">
+               <children>
+                  <Button fx:id="salirButton" mnemonicParsing="false" onAction="#onClickSalirButton" style="-fx-background-color: #230903;" text="Salir" textFill="#f4f2f3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="670.0" prefWidth="1280.0">
+         <children>
+            <VBox prefHeight="670.0" prefWidth="440.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="420.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Nombre" textFill="#230903">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreTextField" promptText="Ej: Juan D. Carmona">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="208.0" layoutY="169.0" text="Categoría" textFill="#230903">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="categoriaTextField" layoutX="30.0" layoutY="196.0" promptText="Ej: Ensaladas">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="208.0" layoutY="250.0" text="Precio" textFill="#230903">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="precioTextField" layoutX="10.0" layoutY="267.0" promptText="Ej: 9.99">
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="207.0" layoutY="263.0" text="Disponibilidad" textFill="#230903">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="disponibilidadTextField" layoutX="30.0" layoutY="293.0" promptText="Ej: true">
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="errorLabel">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="125.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onAniadirClick" style="-fx-background-color: #230903;" text="Añadir" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                        <Button layoutX="205.0" layoutY="60.0" mnemonicParsing="false" onAction="#onModificarClick" style="-fx-background-color: #230903;" text="Modificar" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                        <Button layoutX="179.0" layoutY="60.0" mnemonicParsing="false" onAction="#onEliminarClick" style="-fx-background-color: #230903;" text="Eliminar" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onBuscarClick" style="-fx-background-color: #230903;" text="Buscar" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                        <Button layoutX="205.0" layoutY="60.0" mnemonicParsing="false" onAction="#onListarClick" style="-fx-background-color: #230903;" text="Listar" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></HBox>
+               </children></VBox>
+            <VBox prefHeight="670.0" prefWidth="840.0">
+               <children>
+                  <TableView fx:id="productoTableView" onMouseClicked="#seleccionar" prefHeight="670.0" prefWidth="840.0">
+                    <columns>
+                      <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nombreTableColumn" prefWidth="260.0" text="NOMBRE" />
+                        <TableColumn fx:id="categoriaTablaColumn" prefWidth="275.0" text="CATEGORÍA" />
+                        <TableColumn fx:id="precioTablaColumn" prefWidth="100.0" text="PRECIO" />
+                        <TableColumn fx:id="disponibilidadTablaColumn" prefWidth="110.0" text="DISPONIBILIDAD" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</VBox>
