@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductosController {
@@ -108,13 +109,106 @@ public class ProductosController {
     }
 
     @FXML
-    private void onEliminarClick(){}
+    private void onEliminarClick(){
+        this.errorLabel.setText("");
+        Producto producto = this.productoTableView.getSelectionModel().getSelectedItem();
+        if(producto != null && producto.getId() != null){
+            this.productoService.eliminar(producto);
+            this.productoObservableList.remove(producto);
+            this.productoTableView.refresh();
+            this.limpiarCampos();
+            this.productoTableView.getSelectionModel().clearSelection();
+        }else this.errorLabel.setText("Debe seleccionar un producto.");
+    }
 
     @FXML
-    private void onBuscarClick(){}
+    private void onBuscarClick(){
+        this.errorLabel.setText("");
+        List<Producto> productos = this.productoService.listar();
+        if(productos != null && !productos.isEmpty()){
+            List<Producto> productosEncontrados = new ArrayList<>();
+            //1º campos ingresados vacíos
+            if(
+                    this.nombreTextField.getText().isEmpty()
+                    && this.categoriaTextField.getText().isEmpty()
+                    && this.disponibilidadTextField.getText().isEmpty()
+            ){
+                this.errorLabel.setText("Debes introducir un valor para buscar.");
+            }else if(//buscar por nombre
+                    !this.nombreTextField.getText().isEmpty()
+                    && this.categoriaTextField.getText().isEmpty()
+                    && this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(producto.getNombre().equals(this.nombreTextField.getText())) productosEncontrados.add(producto);
+                }
+            }else if(//buscar por nombre y categoría
+                    !this.nombreTextField.getText().isEmpty()
+                    && !this.categoriaTextField.getText().isEmpty()
+                    && this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(
+                            producto.getNombre().equals(this.nombreTextField.getText())
+                            && producto.getCategoria().equals(this.categoriaTextField.getText())
+                    ) productosEncontrados.add(producto);
+                }
+            }else if(//buscar por nombre, categoria y disponibilidad
+                    !this.nombreTextField.getText().isEmpty()
+                    && !this.categoriaTextField.getText().isEmpty()
+                    && !this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(
+                            producto.getNombre().equals(this.nombreTextField.getText())
+                            && producto.getCategoria().equals(this.categoriaTextField.getText())
+                            && producto.getDisponibilidad().equals(this.disponibilidadTextField.getText().equals("true"))
+                    ) productosEncontrados.add(producto);
+                }
+            }else if(//buscar por categoria
+                    this.nombreTextField.getText().isEmpty()
+                    && !this.categoriaTextField.getText().isEmpty()
+                    && this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(producto.getCategoria().equals(this.categoriaTextField.getText())) productosEncontrados.add(producto);
+                }
+            }else if(//buscar por categoria y disponibilidad
+                    this.nombreTextField.getText().isEmpty()
+                    && !this.categoriaTextField.getText().isEmpty()
+                    && !this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(
+                            producto.getCategoria().equals(this.categoriaTextField.getText())
+                            && producto.getDisponibilidad().equals(this.disponibilidadTextField.getText().equals("true"))
+                    ) productosEncontrados.add(producto);
+                }
+            }else if(//buscar por disponibilidad
+                    this.nombreTextField.getText().isEmpty()
+                    && this.categoriaTextField.getText().isEmpty()
+                    && !this.disponibilidadTextField.getText().isEmpty()
+            ){
+                for(Producto producto : productos){
+                    if(producto.getDisponibilidad().equals(this.disponibilidadTextField.getText().equals("true"))){
+                        productosEncontrados.add(producto);
+                    }
+                }
+            }
+            if(!productosEncontrados.isEmpty()){
+                this.productoObservableList.clear();
+                this.productoObservableList.addAll(productosEncontrados);
+                this.productoTableView.setItems(this.productoObservableList);
+                this.limpiarCampos();
+            }else this.errorLabel.setText("Producto no encontrado.");
+        }
+    }
 
     @FXML
-    private void onListarClick(){}
+    private void onListarClick(){
+        this.cargarListaTable();
+        this.limpiarCampos();
+    }
 
     /**
      * Método que selecciona el producto que hemos seleccionado en la tabla de la vista
