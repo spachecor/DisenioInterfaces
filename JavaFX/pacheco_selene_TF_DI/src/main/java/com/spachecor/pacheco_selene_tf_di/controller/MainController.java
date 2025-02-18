@@ -17,7 +17,7 @@ public class MainController {
     }
     @FXML
     private void onGestionPedidosButton(){
-
+        FXService.cambiarVentana(FXService.PEDIDO_VIEW);
     }
     @FXML
     private void onInformesButton(){

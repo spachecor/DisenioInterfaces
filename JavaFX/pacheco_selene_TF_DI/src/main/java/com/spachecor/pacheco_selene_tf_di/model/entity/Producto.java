@@ -3,7 +3,9 @@ package com.spachecor.pacheco_selene_tf_di.model.entity;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "Productos")
@@ -16,8 +18,12 @@ public class Producto extends Entidad<Producto>{
     private String categoria;
     private BigDecimal precio;
     private Boolean disponibilidad;
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "producto", orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<DetallePedido> detallesPedido;
 
-    public Producto() {}
+    public Producto() {
+        this.detallesPedido = new HashSet<>();
+    }
 
     @Override
     public int compareTo(Producto o) {
@@ -46,6 +52,11 @@ public class Producto extends Entidad<Producto>{
                 ", precio=" + precio +
                 ", disponibilidad='" + disponibilidad + '\'' +
                 '}';
+    }
+
+    @Override
+    public Integer getId() {
+        return this.id;
     }
 
     public void setId(Integer id){
@@ -84,8 +95,11 @@ public class Producto extends Entidad<Producto>{
         this.disponibilidad = disponibilidad;
     }
 
-    @Override
-    public Integer getId() {
-        return this.id;
+    public Set<DetallePedido> getDetallesPedido() {
+        return detallesPedido;
+    }
+
+    public void setDetallesPedido(Set<DetallePedido> detallesPedido) {
+        this.detallesPedido = detallesPedido;
     }
 }

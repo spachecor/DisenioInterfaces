@@ -2,7 +2,9 @@ package com.spachecor.pacheco_selene_tf_di.model.entity;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * Clase Cliente, que representa un cliente del restaurante
@@ -20,8 +22,12 @@ public class Cliente extends Entidad<Cliente>{
     private String nombre;
     private String telefono;
     private String direccion;
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "cliente", orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Pedido> pedidos;
 
-    public Cliente() {}
+    public Cliente() {
+        this.pedidos = new HashSet<>();
+    }
 
     @Override
     public int compareTo(Cliente o) {
@@ -52,6 +58,11 @@ public class Cliente extends Entidad<Cliente>{
                 '}';
     }
 
+    @Override
+    public Integer getId() {
+        return this.id;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -76,8 +87,11 @@ public class Cliente extends Entidad<Cliente>{
         this.direccion = direccion;
     }
 
-    @Override
-    public Integer getId() {
-        return this.id;
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 }

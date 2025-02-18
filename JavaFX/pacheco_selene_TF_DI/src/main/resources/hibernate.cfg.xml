@@ -13,5 +13,7 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <mapping class="com.spachecor.pacheco_selene_tf_di.model.entity.Cliente"/>
         <mapping class="com.spachecor.pacheco_selene_tf_di.model.entity.Producto"/>
+        <mapping class="com.spachecor.pacheco_selene_tf_di.model.entity.Pedido"/>
+        <mapping class="com.spachecor.pacheco_selene_tf_di.model.entity.DetallePedido"/>
     </session-factory>
 </hibernate-configuration>
