@@ -54,13 +54,7 @@ public class Pedido extends Entidad<Pedido>{
 
     @Override
     public String toString() {
-        return "Pedido{" +
-                "id=" + id +
-                ", cliente=" + cliente +
-                ", fecha_pedido=" + fecha_pedido +
-                ", estado='" + estado + '\'' +
-                ", total=" + total +
-                '}';
+        return this.id.toString();
     }
 
     public Cliente getCliente() {

@@ -45,13 +45,7 @@ public class Producto extends Entidad<Producto>{
 
     @Override
     public String toString() {
-        return "Producto{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", precio=" + precio +
-                ", disponibilidad='" + disponibilidad + '\'' +
-                '}';
+        return this.id.toString()+"- "+this.nombre;
     }
 
     @Override

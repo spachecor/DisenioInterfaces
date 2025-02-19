@@ -46,7 +46,6 @@ public class ProductosController {
     @FXML
     protected void initialize() {
         this.productoService = new GenericRepositoryService<>(Producto.class);
-        System.out.println(productoService.listar());
         //inicializamos las columnas
         this.idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         this.nombreTableColumn.setCellValueFactory(new PropertyValueFactory<>("nombre"));

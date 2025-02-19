@@ -50,12 +50,7 @@ public class Cliente extends Entidad<Cliente>{
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", direccion='" + direccion + '\'' +
-                '}';
+        return this.nombre;
     }
 
     @Override
