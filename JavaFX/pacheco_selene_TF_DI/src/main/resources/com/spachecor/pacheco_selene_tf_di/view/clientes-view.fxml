@@ -142,6 +142,14 @@
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding></Button>
+                        <Button layoutX="249.0" layoutY="20.0" mnemonicParsing="false" onAction="#onGenerarInformeClick" style="-fx-background-color: #230903;" text="Generar&#10;Informe" textFill="#f4f2f3">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Button>
                      </children>
                      <VBox.margin>
                         <Insets />

@@ -224,6 +224,14 @@ public class PedidosController {
             this.subtotalTextField.setText(detallePedido.getSubtotal().toString());
         }
     }
+    @FXML
+    private void onGenerarInformeClick(){
+        //todo
+    }
+    @FXML
+    private void onClickGenerarTicketClick(){
+        //todo
+    }
 
     private void cargarListaPedidoTable(){
         List<Pedido> pedidos = this.pedidoService.listar();

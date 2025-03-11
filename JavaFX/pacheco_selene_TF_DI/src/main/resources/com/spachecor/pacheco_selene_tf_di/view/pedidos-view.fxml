@@ -99,6 +99,14 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
+                  <Button layoutX="275.0" layoutY="10.0" mnemonicParsing="false" onAction="#onGenerarInformeClick" style="-fx-background-color: #230903;" text="Generar Informe" textFill="#f4f2f3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
                </children>
             </HBox>
             <VBox alignment="CENTER" prefHeight="190.0" prefWidth="420.0" spacing="10.0">
@@ -161,7 +169,15 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button layoutX="220.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClickEliminarDetallePedidoButton" style="-fx-background-color: #230903;" text="Eliminar" textFill="#f4f2f3">
+                  <Button layoutX="220.0" layoutY="12.0" mnemonicParsing="false" onAction="#onGenerarInformeClick" style="-fx-background-color: #230903;" text="Eliminar" textFill="#f4f2f3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="275.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickGenerarTicketClick" style="-fx-background-color: #230903;" text="Generar Ticket" textFill="#f4f2f3">
                      <font>
                         <Font name="Times New Roman Bold" size="14.0" />
                      </font>

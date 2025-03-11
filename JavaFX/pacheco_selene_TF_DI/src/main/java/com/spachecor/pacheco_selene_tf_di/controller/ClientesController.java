@@ -199,6 +199,10 @@ public class ClientesController {
         this.cargarListaTable();
         this.limpiarCampos();
     }
+    @FXML
+    private void onGenerarInformeClick(){
+        //todo
+    }
 
     /**
      * Método que selecciona el producto que hemos seleccionado en la tabla de la vista
