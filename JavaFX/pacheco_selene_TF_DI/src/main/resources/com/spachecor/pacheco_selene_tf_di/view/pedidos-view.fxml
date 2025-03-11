@@ -169,7 +169,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button layoutX="220.0" layoutY="12.0" mnemonicParsing="false" onAction="#onGenerarInformeClick" style="-fx-background-color: #230903;" text="Eliminar" textFill="#f4f2f3">
+                  <Button layoutX="220.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClickEliminarDetallePedidoButton" style="-fx-background-color: #230903;" text="Eliminar" textFill="#f4f2f3">
                      <font>
                         <Font name="Times New Roman Bold" size="14.0" />
                      </font>
